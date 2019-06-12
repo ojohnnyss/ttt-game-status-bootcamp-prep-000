@@ -34,11 +34,7 @@ WIN_COMBINATIONS = [
   end
   
   def draw?
-    if !won?(board) && full?(board)
-    return true
-  else
-    return false
-  end
+     full? && !won?
   end
   
   def over?
