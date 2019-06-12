@@ -33,11 +33,11 @@ WIN_COMBINATIONS = [
     board.all? {|index| index == "X" || index == "O"}
   end
   
-  def draw?
+  def draw?(board)
      full? && !won?
   end
   
-  def over?
+  def over?(board)
     if won?(board) || full?(board) || draw?(board)
     return true
   else
@@ -45,7 +45,7 @@ WIN_COMBINATIONS = [
   end
   end
   
-  def winner
+  def winner(board)
     index = []
   index = won?(board)
   if index == false
